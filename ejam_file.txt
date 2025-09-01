@@ -1,0 +1,308 @@
+Welcome to Cloud Shell! Type "help" to get started, or type "gemini" to try prompting with Gemini CLI.
+To set your Cloud Platform project in this session use `gcloud config set project [PROJECT_ID]`.
+You can view your projects by running `gcloud projects list`.
+ejamndur@cloudshell:~$ echo "Jacob Myom Emmanuel"
+mkdir -p Jacob_Myom_Emmanuel
+mkdir -p biocomputing && cd biocomputing
+wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk -O wildtype_duplicate.gbk
+mv wildtype.fna ../Jacob_Myom_Emmanuel/
+rm wildtype_duplicate.gbk
+if grep -qi "tatatata" ../Jacob_Myom_Emmanuel/wildtype.fna; then
+  echo "MUTANT"
+else
+  echo "WILD TYPE"
+fi
+grep -i "tatatata" ../Jacob_Myom_Emmanuel/wildtype.fna > ../tatatata_matches.txt
+tail -n +2 wildtype.gbk | wc -l
+head -n 1 wildtype.gbk | awk '{print $3}'
+grep "^SOURCE" wildtype.gbk
+grep "/gene=" wildtype.gbk
+history
+ls ../Jacob_Myom_Emmanuel
+ls .
+Jacob Myom Emmanuel
+--2025-08-30 21:11:00--  https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 200694 (196K) [text/plain]
+Saving to: ‘wildtype.fna’
+
+wildtype.fna             100%[===============================>] 195.99K  --.-KB/s    in 0.004s  
+
+2025-08-30 21:11:00 (53.4 MB/s) - ‘wildtype.fna’ saved [200694/200694]
+
+--2025-08-30 21:11:00--  https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 399730 (390K) [text/plain]
+Saving to: ‘wildtype.gbk.2’
+
+wildtype.gbk.2           100%[===============================>] 390.36K  --.-KB/s    in 0.006s  
+
+2025-08-30 21:11:01 (68.8 MB/s) - ‘wildtype.gbk.2’ saved [399730/399730]
+
+--2025-08-30 21:11:01--  https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.108.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 399730 (390K) [text/plain]
+Saving to: ‘wildtype_duplicate.gbk’
+
+wildtype_duplicate.gbk   100%[===============================>] 390.36K  --.-KB/s    in 0.006s  
+
+2025-08-30 21:11:01 (65.7 MB/s) - ‘wildtype_duplicate.gbk’ saved [399730/399730]
+
+MUTANT
+5749
+197394
+SOURCE      Staphylococcus aureus
+                     /gene="dnaA"
+                     /gene="dnaN"
+                     /gene="recF"
+                     /gene="gyrB"
+                     /gene="gyrA"
+                     /gene="nnrD"
+                     /gene="hutH"
+                     /gene="serS"
+                     /gene="ygaZ"
+                     /gene="metX"
+                     /gene="gdpP"
+                     /gene="rplI"
+                     /gene="dnaC"
+                     /gene="purA"
+                     /gene="walR"
+                     /gene="walK"
+                     /gene="yycI"
+                     /gene="yycJ"
+                     /gene="mggB"
+                     /gene="rlmH"
+                     /gene="pre"
+                     /gene="ble"
+                     /gene="knt"
+                     /gene="ugpQ"
+                     /gene="paaZ"
+                     /gene="pbp"
+                     /gene="mecR1"
+                     /gene="mecI"
+                     /gene="nagC"
+                     /gene="pspE_1"
+                     /gene="pksB"
+                     /gene="pspE_2"
+                     /gene="csoR"
+                     /gene="cadA"
+                     /gene="cadC"
+                     /gene="xerD"
+                     /gene="hin"
+                     /gene="tnpR"
+                     /gene="mcrB"
+                     /gene="emrY"
+                     /gene="dus"
+                     /gene="recD"
+                     /gene="plc"
+                     /gene="btr"
+                     /gene="yxeP"
+                     /gene="norB_1"
+                     /gene="lctP"
+                     /gene="spa"
+                     /gene="sarS"
+                     /gene="yfhA"
+                     /gene="yfiZ"
+                     /gene="yfiY"
+                     /gene="sbnA"
+                     /gene="arcB"
+                     /gene="iucC_1"
+                     /gene="tetA"
+                     /gene="iucA"
+                     /gene="iucC_2"
+                     /gene="garL"
+                     /gene="btrK"
+                     /gene="butA"
+                     /gene="wbgU"
+                     /gene="tuaA"
+                     /gene="wbnH"
+                     /gene="rfbX"
+                     /gene="sodM"
+                     /gene="treR"
+                     /gene="deoD"
+                     /gene="norB_2"
+                     /gene="deoC1"
+                     /gene="deoB"
+                     /gene="phnE_1"
+                     /gene="phnE_2"
+                     /gene="glnQ"
+                     /gene="phnD"
+                     /gene="yfkN"
+                     /gene="adhE"
+                     /gene="cap8A"
+                     /gene="ywqD"
+                     /gene="ywqE"
+                     /gene="pglF"
+                     /gene="capD"
+                     /gene="wbjC"
+                     /gene="wbpI"
+                     /gene="maa"
+                     /gene="epsL"
+                     /gene="gnu"
+                     /gene="wecC"
+                     /gene="mnaA"
+                     /gene="isdI"
+                     /gene="ybaN"
+                     /gene="aldA"
+                     /gene="czcD"
+                     /gene="cmpD"
+                     /gene="cmpC"
+                     /gene="ssuC"
+                     /gene="srfAB"
+                     /gene="sfp"
+                     /gene="yagU"
+                     /gene="argB"
+                     /gene="argJ"
+                     /gene="argC"
+                     /gene="rocD2"
+                     /gene="brnQ"
+                     /gene="yecD"
+                     /gene="ipdC"
+                     /gene="ptsG"
+    1  echo "Jacob Myom Emmanuel"
+    2  mkdir -p "Jacob_Myom_Emmanuel"
+    3  mkdir -p biocomputing && cd biocomputing
+    4  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+    5  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+    6  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk -O wildtype_duplicate.gbk
+    7  mv wildtype.fna ../Jacob_Myom_Emmanuel/
+    8  rm wildtype_duplicate.gbk
+    9  ls
+   10  grep -i "tatatata" ../Jacob_Myom_Emmanuel/wildtype.fna && echo "MUTANT" || echo "WILD TYPE"
+   11  grep -i "tatatata" ../Jacob_Myom_Emmanuel/wildtype.fna > ../tatatata_matches.txt
+   12  tail -n +2 wildtype.gbk | wc -l
+   13  ls
+   14  head -n 1 wildtype.gbk | awk '{print $3}'
+   15  grep "^SOURCE" wildtype.gbk
+   16  grep "/gene=" wildtype.gbk
+   17  clear && history
+   18  ls ../Jacob_Myom_Emmanuel
+   19  ls .
+   20  nano myscript.sh
+   21  conda activate base
+   22  conda create -y -n funtools python=3.10
+   23  conda activate funtools
+   24  #!/bin/bash
+   25  # Project 1: Bash Basics
+   26  # Author: Jacob Myom Emmanuel
+   27  # 1. Print your name
+   28  echo "Jacob Myom Emmanuel"
+   29  # 2. Create a folder titled your name
+   30  mkdir -p Jacob_Myom_Emmanuel
+   31  # 3. Create biocomputing directory and change into it
+   32  mkdir -p biocomputing && cd biocomputing
+   33  # 4. Download 3 files (duplicate .gbk included)
+   34  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+   35  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+   36  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk -O wildtype_duplicate.gbk
+   37  # 5. Move .fna file into your name folder
+   38  mv wildtype.fna ../Jacob_Myom_Emmanuel/
+   39  # 6. Delete duplicate gbk file
+   40  rm wildtype_duplicate.gbk
+   41  # 7. Confirm if .fna file is mutant or wild type
+   42  if grep -qi "tatatata" ../Jacob_Myom_Emmanuel/wildtype.fna; then   echo "MUTANT"; else   echo "WILD TYPE"; fi
+   43  # 8. If mutant, print all matching lines into a new file
+   44  grep -i "tatatata" ../Jacob_Myom_Emmanuel/wildtype.fna > ../tatatata_matches.txt
+   45  # 9. Count number of lines (excluding header) in .gbk file
+   46  tail -n +2 wildtype.gbk | wc -l
+   47  # 10. Print sequence length (LOCUS line)
+   48  head -n 1 wildtype.gbk | awk '{print $3}'
+   49  # 11. Print source organism (SOURCE line)
+   50  grep "^SOURCE" wildtype.gbk
+   51  # 12. List all gene names
+   52  grep "/gene=" wildtype.gbk
+   53  # 13. Clear terminal and show commands used today
+   54  # (commented out 'clear' so script output is visible)
+   55  history
+   56  # 14. List files in both folders
+   57  ls ../Jacob_Myom_Emmanuel
+   58  ls 
+   59  pwd
+   60  touch ejam_file.txt
+   61  echo "Jacob Myom Emmanuel"
+   62  mkdir -p Jacob_Myom_Emmanuel
+   63  mkdir -p biocomputing && cd biocomputing
+   64  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+   65  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+   66  wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk -O wildtype_duplicate.gbk
+   67  mv wildtype.fna ../Jacob_Myom_Emmanuel/
+   68  rm wildtype_duplicate.gbk
+   69  if grep -qi "tatatata" ../Jacob_Myom_Emmanuel/wildtype.fna; then   echo "MUTANT"; else   echo "WILD TYPE"; fi
+   70  grep -i "tatatata" ../Jacob_Myom_Emmanuel/wildtype.fna > ../tatatata_matches.txt
+   71  tail -n +2 wildtype.gbk | wc -l
+   72  head -n 1 wildtype.gbk | awk '{print $3}'
+   73  grep "^SOURCE" wildtype.gbk
+   74  grep "/gene=" wildtype.gbk
+   75  history
+wildtype.fna
+ejam_file.txt  myscript.sh  wildtype.gbk  wildtype.gbk.1  wildtype.gbk.2
+ejamndur@cloudshell:~/biocomputing$
+#Project_2
+set -euo pipefail
+if command -v conda >/dev/null 2>&1; then
+source "$(conda info --base)/etc/profile.d/conda.sh"
+else
+  echo "Conda not found. Install Miniconda or Anaconda, open a NEW terminal, then re-run." >&2
+  exit 1
+fi
+
+echo "1) Activate your base conda environment"
+conda activate base
+
+echo "2) Create a conda environment named funtools"
+conda create -y -n funtools python=3.10
+
+echo "3) Activate the funtools environment"
+conda activate funtools
+
+echo "4) Install Figlet using conda (conda-forge channel)"
+conda install -y -c conda-forge figlet
+
+echo "5) Run figlet <your name>"
+figlet "Jacob Myom Emmanuel"
+
+echo "6) Install bwa through the bioconda channel"
+conda install -y -c bioconda -c conda-forge bwa
+
+echo "7) Install blast through the bioconda channel"
+conda install -y -c bioconda -c conda-forge blast
+
+echo "8) Install samtools through the bioconda channel"
+conda install -y -c bioconda -c conda-forge samtools
+
+echo "9) Install bedtools through the bioconda channel"
+conda install -y -c bioconda -c conda-forge bedtools
+
+echo "10) Install spades.py through the bioconda channel (package name: spades)"
+conda install -y -c bioconda -c conda-forge spades
+
+echo "11) Install bcftools through the bioconda channel"
+conda install -y -c bioconda -c conda-forge bcftools
+
+echo "12) Install fastp through the bioconda channel"
+conda install -y -c bioconda -c conda-forge fastp
+
+echo "13) Install multiqc through the bioconda channel"
+conda install -y -c bioconda -c conda-forge multiqc
+
+echo
+echo "=== Installed versions (quick check) ==="
+(bwa 2>&1 | head -n 1) || true
+(blastn -version | head -n 1) || true
+(samtools --version | head -n 1) || true
+(bedtools --version) || true
+(spades.py --version | head -n 1) || true
+(bcftools --version | head -n 1) || true
+(fastp -v) || true
+(multiqc --version) || true
+
+echo
+echo "All done. You're in the 'funtools' environment."
