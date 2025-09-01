@@ -306,3 +306,7 @@ echo "=== Installed versions (quick check) ==="
 
 echo
 echo "All done. You're in the 'funtools' environment."
+
+https://www.linkedin.com/posts/jacob-myom-emmanuel-a4783b2aa_hackbio-bioinformatics-bash-activity-7368367110495895552-RPul?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAEqEwxcB2MlZHjXyA7mYJ93VbrLL8lkNbgo&utm_campaign=copy_link
+
+https://github.com/Jacob2314-Maker/MY-HACKBIO-PROJECTS/edit/main/ejam_file.txt
